@@ -7,7 +7,7 @@
     "test": "test"
   },
   "bin": { 
-    "jscover": "./lib/jscover.js"
+    "jscover": "./bin/jscover"
   },
   "scripts": {
     "test": "make test"
