@@ -1,11 +1,9 @@
-jscover [![Build Status](https://secure.travis-ci.org/fengmk2/jscover.png)](http://travis-ci.org/fengmk2/jscover)
+jscover
 =======
 
 ![logo](https://raw.github.com/fengmk2/jscover/master/logo.png)
 
 node wrap for [JSCover](http://tntim96.github.com/JSCover/).
-
-jscoverage: [100%](http://fengmk2.github.com/coverage/jscover.html)
 
 ## Install
 
