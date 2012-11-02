@@ -13,7 +13,8 @@
     "test": "make test"
   },
   "dependencies": {
-    "commander": "1.0.5"
+    "commander": "1.0.5",
+    "ndir": "0.1.5"
   },
   "devDependencies": {
     "should": "*",
