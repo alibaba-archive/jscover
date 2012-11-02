@@ -14,5 +14,7 @@ var jscover = require('../');
 var should = require('should');
 
 describe('jscover.test.js', function () {
-
+  it('should coverage lib to lib-cov', function (done) {
+    jscover('a', 'b', {}, done);
+  });
 });
