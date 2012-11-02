@@ -9,12 +9,14 @@ test:
 		$(TESTS)
 
 test-cov:
-	@rm -rf ./lib-cov
 	@$(MAKE) lib-cov
 	@JSCOVER_COV=1 $(MAKE) test
 	@JSCOVER_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
 
-lib-cov:
-	@node bin/jscover.js lib $@
+all-cov:
+	@node ./bin/jscover --exclude=node_modules --exclude=test --exclude=bin . cov
 
-.PHONY: test-cov test lib-cov
+lib-cov:
+	@node ./bin/jscover lib $@
+
+.PHONY: test-cov test lib-cov all-cov
