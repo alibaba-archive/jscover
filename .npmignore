@@ -1,5 +1,6 @@
 test/
 cov/
+all-cov/
 coverage.html
 lib-cov/
 Makefile

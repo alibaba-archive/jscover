@@ -1,0 +1,1 @@
+exports.hello = '你好，Hello world';

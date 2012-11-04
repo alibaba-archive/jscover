@@ -32,6 +32,8 @@ describe('jscover.test.js', function () {
         should.not.exist(output);
         var regexp = fs.readFileSync(path.join(source, 'regexp.js'), 'utf8');
         fs.readFileSync(path.join(target, 'regexp.js'), 'utf8').should.include(regexp);
+        var targetFoo = path.join(target, 'subdir', 'foo');
+        require(path.join(source, 'subdir', 'foo')).hello.should.equal(require(targetFoo).hello);
         done();
       });
     });

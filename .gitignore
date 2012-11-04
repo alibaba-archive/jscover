@@ -1,5 +1,6 @@
 lib-cov
 cov/
+all-cov/
 coverage.html
 *.seed
 *.log
