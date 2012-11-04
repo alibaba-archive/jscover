@@ -1,4 +1,11 @@
 
+0.1.0 / 2012-11-04 
+==================
+
+  * support windows env
+  * add more test cases
+  * add subdir test case
+
 0.0.4 / 2012-11-04 
 ==================
 

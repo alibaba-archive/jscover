@@ -1,6 +1,6 @@
 {
   "name": "jscover",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "node wrap for JSCover.",
   "main": "index.js",
   "directories": {
