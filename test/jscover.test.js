@@ -14,19 +14,60 @@ var jscover = require('../');
 var should = require('should');
 var path = require('path');
 var fs = require('fs');
+var fse = require('fs-extra');
 
 
 describe('jscover.test.js', function () {
+  var source = path.join(__dirname, 'lib');
+  var target = path.join(__dirname, 'lib-cov');
+
+  beforeEach(function () {
+    fse.removeSync(target);
+  });
+
   it('should coverage lib to lib-cov', function (done) {
-    jscover('a', 'b', {}, function () {
+    should.ok(!fs.existsSync(target));
+    jscover(source, target, null, function (err, stdout) {
+      should.not.exist(err);
+      should.not.exist(stdout);
+      should.ok(fs.existsSync(target));
+      done();
+    });
+  });
+
+  it('should coverage lib to lib-cov with --exclude=subdir', function (done) {
+    should.ok(!fs.existsSync(target));
+    should.ok(!fs.existsSync(path.join(target, 'subdir')));
+    jscover(source, target, ['--exclude=subdir'], function (err, stdout) {
+      should.not.exist(err);
+      should.not.exist(stdout);
+      should.ok(fs.existsSync(target));
+      should.ok(!fs.existsSync(path.join(target, 'subdir')));
+      done();
+    });
+  });
+
+  it('should return stdout when args missing', function (done) {
+    jscover('', null, {}, function (err) {
+      should.exist(err);
+      err.name.should.equal('JSCoverError');
+      err.message.should.equal("Source directory '--exclude=' is invalid");
+      done();
+    });
+  });
+
+  it('should return error when dir not exists', function (done) {
+    jscover('a', 'b', {}, function (err) {
+      should.exist(err);
+      err.name.should.equal('JSCoverError');
+      err.message.should.equal("Source directory 'a' is invalid");
       done();
     });
   });
 
   describe('utf8', function () {
-    var source = path.join(__dirname, 'lib');
-    var target = path.join(__dirname, 'lib-cov');
-    it('should coverage lib to lib-cov', function (done) {
+    it('should coverage no-ascii char success', function (done) {
+      should.ok(!fs.existsSync(target));
       jscover(source, target, null, function (err, output) {
         should.not.exist(err);
         should.not.exist(output);

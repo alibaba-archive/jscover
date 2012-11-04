@@ -16,7 +16,7 @@ test-cov:
 	@JSCOVER_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
 
 all-cov:
-	@node ./bin/jscover --exclude=lib-cov --exclude=test --exclude=bin . all-cov
+	@node ./bin/jscover --exclude=lib-cov --exclude=test --exclude=bin . $@
 
 lib-cov:
 	@node ./bin/jscover lib $@
