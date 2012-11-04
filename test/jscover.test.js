@@ -51,7 +51,7 @@ describe('jscover.test.js', function () {
     jscover('', null, {}, function (err) {
       should.exist(err);
       err.name.should.equal('JSCoverError');
-      err.message.should.equal("Source directory '--exclude=' is invalid");
+      err.message.should.equal("Source directory '' is invalid");
       done();
     });
   });
