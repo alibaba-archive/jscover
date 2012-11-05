@@ -15,6 +15,7 @@ var should = require('should');
 var path = require('path');
 var fs = require('fs');
 var fse = require('fs-extra');
+fs.existsSync = fs.existsSync || path.existsSync;
 
 
 describe('jscover.test.js', function () {

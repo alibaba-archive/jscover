@@ -1,5 +1,6 @@
 test/
 cov/
+__cov__*
 all-cov/
 coverage.html
 lib-cov/
