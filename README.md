@@ -5,10 +5,12 @@ jscover
 
 node wrap for [JSCover](http://tntim96.github.com/JSCover/).
 
+* jscoverage: [94%](http://fengmk2.github.com/coverage/jscover.html)
+
 ## Install
 
 ```bash
-$ npm install jscover
+$ npm install jscover -g
 ```
 
 ## Usage
