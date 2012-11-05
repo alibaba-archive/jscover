@@ -1,4 +1,10 @@
 
+0.1.1 / 2012-11-05 
+==================
+
+  * fixed unittest for node0.6.x
+  * use random temp dir name
+
 0.1.0 / 2012-11-04 
 ==================
 
