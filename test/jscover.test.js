@@ -52,7 +52,7 @@ describe('jscover.test.js', function () {
     jscover('', null, {}, function (err) {
       should.exist(err);
       err.name.should.equal('JSCoverError');
-      err.message.should.equal("Source directory '' is invalid");
+      err.message.trim().should.equal("Command failed: Source directory '' is invalid");
       done();
     });
   });
@@ -61,7 +61,7 @@ describe('jscover.test.js', function () {
     jscover('a', 'b', {}, function (err) {
       should.exist(err);
       err.name.should.equal('JSCoverError');
-      err.message.should.equal("Source directory 'a' is invalid");
+      err.message.trim().should.equal("Command failed: Source directory 'a' is invalid");
       done();
     });
   });
@@ -74,8 +74,11 @@ describe('jscover.test.js', function () {
         should.not.exist(output);
         var regexp = fs.readFileSync(path.join(source, 'regexp.js'), 'utf8');
         fs.readFileSync(path.join(target, 'regexp.js'), 'utf8').should.include(regexp);
-        var targetFoo = path.join(target, 'subdir', 'foo');
-        require(path.join(source, 'subdir', 'foo')).hello.should.equal(require(targetFoo).hello);
+        var targetFoo = require(path.join(target, 'subdir', 'foo'));
+        var sourceFoo = require(path.join(source, 'subdir', 'foo'));
+        for (var k in sourceFoo) {
+          sourceFoo[k].should.equal(targetFoo[k]);
+        }
         done();
       });
     });
