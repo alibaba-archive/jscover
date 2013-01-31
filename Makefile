@@ -1,6 +1,6 @@
 TESTS = test/*.test.js
 REPORTER = spec
-TIMEOUT = 1000
+TIMEOUT = 5000
 GLOBALS = _*jscoverage
 
 test:
