@@ -1,4 +1,11 @@
 
+0.2.3 / 2013-02-18 
+==================
+
+  * update JSCover-all.jar to 0.2.3
+  * keep same version with JSCover-all.jar
+  * remove 0.6 from travis
+
 0.2.2 / 2013-01-31 
 ==================
 

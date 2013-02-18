@@ -22,11 +22,25 @@ Just like `jscoverage`
 $ jscover lib lib-cov
 ```
 
+## Authors
+
+```bash
+$ git summary 
+
+ project  : jscover
+ repo age : 4 months
+ active   : 9 days
+ commits  : 30
+ files    : 18
+ authors  : 
+    30  fengmk2                 100.0%
+```
+
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2012 fengmk2 &lt;fengmk2@gmail.com&gt;
+Copyright (c) 2012 - 2013 fengmk2 &lt;fengmk2@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
