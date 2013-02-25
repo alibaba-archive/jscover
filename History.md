@@ -1,4 +1,9 @@
 
+0.2.4 / 2013-02-25 
+==================
+
+  * change JSCover.jar to 0.1.1, fixed 0.2.x not work with mocha problem.
+
 0.2.3 / 2013-02-18 
 ==================
 
