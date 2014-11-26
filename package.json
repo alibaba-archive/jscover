@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:negruta/jscover.git"
+    "url": "git@github.com:fengmk2/jscover.git"
   },
   "keywords": [
     "jscover",
