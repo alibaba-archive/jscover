@@ -1,6 +1,6 @@
 {
   "name": "jscover",
-  "version": "0.2.4",
+  "version": “1.0.0”,
   "description": "node wrap for JSCover.",
   "main": "index.js",
   "directories": {
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fengmk2/jscover.git"
+    "url": "git@github.com:negruta/jscover.git"
   },
   "keywords": [
     "jscover",
