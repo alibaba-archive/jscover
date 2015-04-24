@@ -52,7 +52,7 @@ describe('jscover.test.js', function () {
     jscover('', null, {}, function (err) {
       should.exist(err);
       err.name.should.equal('JSCoverError');
-      err.message.trim().should.equal("Command failed: Source directory '' is invalid");
+      err.message.trim().should.endWith("Source directory '' is invalid");
       done();
     });
   });
@@ -61,7 +61,7 @@ describe('jscover.test.js', function () {
     jscover('a', 'b', {}, function (err) {
       should.exist(err);
       err.name.should.equal('JSCoverError');
-      err.message.trim().should.equal("Command failed: Source directory 'a' is invalid");
+      err.message.trim().should.endWith("Source directory 'a' is invalid");
       done();
     });
   });
