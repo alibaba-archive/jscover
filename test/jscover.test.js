@@ -73,7 +73,7 @@ describe('jscover.test.js', function () {
         should.not.exist(err);
         should.not.exist(output);
         var regexp = fs.readFileSync(path.join(source, 'regexp.js'), 'utf8');
-        fs.readFileSync(path.join(target, 'regexp.js'), 'utf8').should.include(regexp);
+        fs.readFileSync(path.join(target, 'regexp.js'), 'utf8').should.containEql(regexp);
         var targetFoo = require(path.join(target, 'subdir', 'foo'));
         var sourceFoo = require(path.join(source, 'subdir', 'foo'));
         for (var k in sourceFoo) {
