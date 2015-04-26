@@ -1,12 +1,12 @@
 {
   "name": "jscover",
-  "version": "0.2.4",
+  "version": "1.0.0",
   "description": "node wrap for JSCover.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "bin": { 
+  "bin": {
     "jscover": "./bin/jscover"
   },
   "scripts": {
