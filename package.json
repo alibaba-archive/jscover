@@ -1,6 +1,12 @@
 {
   "name": "jscover",
   "version": "1.0.0",
+  "engine": {
+    "node": "^0.12.0",
+    "node": "^4.0.0",
+    "node": "^6.0.0",
+    "node": "^7.0.0"
+  },
   "description": "node wrap for JSCover.",
   "main": "index.js",
   "directories": {
@@ -13,7 +19,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "fs-extra": "1.0.0",
+    "fs-extra": "^1.0.0",
     "debug": "0.7.0",
     "ndir": "0.1.5"
   },
