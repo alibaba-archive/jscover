@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "fs-extra": "0.3.1",
-    "debug": "0.7.0",
+    "debug": "2.6.9",
     "ndir": "0.1.5"
   },
   "devDependencies": {
